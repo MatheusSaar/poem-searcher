@@ -1,0 +1,82 @@
+:root {
+    --hovercolor: #FFE6F4;
+    --idlecolor: #FFBDE1;
+    --darkeridle: #bb5599;
+}
+
+.ddlc-container {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 5px;
+}
+
+.ddlc-select-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.ddlc-select-box .ddlc-options-container {
+    display: none;
+    user-select: none;
+
+    font-family: "RifficBold";
+    font-size: 20px;
+    -webkit-text-stroke: 1px var(--darkeridle);
+    color: white;
+    text-align: center;
+
+    background: var(--hovercolor);
+    border: 2px solid var(--idlecolor);
+    border-radius: 5px;
+    width: 98.5%;
+    opacity: 0;
+}
+
+.ddlc-selected {
+    user-select: none;
+    font-family: "RifficBold";
+    -webkit-text-stroke: 1px var(--darkeridle);
+    font-size: 18px;
+
+    background-color: var(--hovercolor);
+    border: 2px solid var(--idlecolor);
+    border-radius: 5px;
+    padding: 3px;
+
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.ddlc-select-box .ddlc-options-container.active {
+    display: block;
+    user-select: none;
+    position: relative;
+    top: 40px;
+    max-height: 240px;
+
+    transition: all 0.4s;
+    opacity: 1;
+}
+
+.ddlc-select-box .ddlc-option, 
+.ddlc-selected {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.ddlc-select-box .ddlc-option:hover {
+    background: var(--idlecolor);
+}
+
+.ddlc-select-box label {
+    cursor: pointer;
+}
+
+.ddlc-select-box .radio {
+    display: none;
+}

@@ -1,0 +1,235 @@
+:root {
+    --hovercolor: #FFE6F4;
+    --idlecolor: #FFBDE1;
+    --darkeridle: #bb5599;
+}
+
+@font-face {
+    font-family: 'RifficBold';
+    src: url(../fonts/RifficFree-Bold.ttf) format('truetype');
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'RifficBold';
+    letter-spacing: 2px;
+    background-image: url(../imagem/Background.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: #00000091;
+    box-shadow: 0 0 12px 4px #383838;
+    width: 500px;
+    margin: auto;
+    margin-top: 80px;
+
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 15px;
+}
+
+.header {
+    font-family: "RifficBold";
+    -webkit-text-stroke: 1px var(--darkeridle);
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+footer {
+    position: absolute;
+    background-color: #242424;
+    user-select: none;
+
+    text-align: center;
+    color: white;
+    margin-top: -20px;
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    padding: 5px;
+}
+
+.content {
+    background-color: var(--hovercolor);
+    border: 3px solid var(--idlecolor);
+    width: 200px;
+
+    margin: auto;
+    padding: 1px 1px 25px 1px;
+    border-radius: 10px;
+}
+
+.content .but {
+    font-family: "RifficBold";
+    font-size: 20px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px var(--darkeridle);
+    color: #fff;
+
+    background: var(--hovercolor);
+    border: 2px solid var(--idlecolor);
+    border-radius: 5px;
+    width: 70%;
+    height: 50%;
+
+    display: block;
+    margin: auto;
+}
+
+.content .but:hover {
+    border: 2px solid var(--darkeridle);
+
+    display: block;
+    margin: auto;
+}
+
+.content #searcher {
+    appearance: none;
+
+    font-family: "RifficBold";
+    font-size: 20px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px var(--darkeridle);
+    color: white;
+
+    background: var(--hovercolor);
+    border: 2px solid var(--idlecolor);
+    border-radius: 5px;
+    text-align: center;
+
+    display: block;
+    margin: 20px auto 20px auto;
+    max-width: 80%;
+}
+
+.content #searcher:hover {
+    background: var(--hovercolor);
+    border: 2px solid var(--darkeridle);
+}
+
+.return {
+    display: none;
+    background-color: var(--hovercolor);
+    border: 3px solid var(--idlecolor);
+    width: 250px;
+    margin: auto;
+    padding: 3px;
+    border-radius: 10px;
+
+    font-family: "RifficBold";
+    font-size: 22px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px var(--darkeridle);
+    color: #fff;
+
+    text-align: center;
+    margin-top: 10px;
+}
+
+.jump {
+    transform: translateY(0);
+    animation-name: jump;
+    animation-duration: 1.5s;
+    animation-play-state: running;
+}
+
+@keyframes jump {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-20%);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-20%);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-20%);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+}
+
+.girls {
+    display: flex;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #00000091;
+    box-shadow: 0 0 12px 4px #383838;
+    width: 500px;
+    height: 250px;
+
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.girls>div {
+    display: flex;
+    transform: translateY(0);
+}
+
+.audio {
+    position: fixed;
+    display: flex;
+    right: 10px;
+    bottom: 40px;
+
+    background-color: #00000091;
+    width: 70px;
+    height: 70px;
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#checkmute {
+    position: fixed;
+    background-color: var(--hovercolor);
+    border: 2px solid var(--idlecolor);
+    border-radius: 3px;
+
+    width: 25px;
+    height: 25px;
+}
+
+#checkmute.active {
+    background-image: url(../imagem/check_selected_foreground.png);
+    background-position-x: -2px;
+    background-position-y: -2px;
+}

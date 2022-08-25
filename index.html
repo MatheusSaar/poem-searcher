@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ddlcbox.css">
+</head>
+<body>
+    
+    <section>
+
+        <div class="header">
+
+            <h1>Procure palavras dos poemas de DDLC e DDLC+ aqui!</h1>
+    
+        </div>
+
+        <div class="ddlc-container">
+
+            <div class="ddlc-select-box">
+        
+                <div class="ddlc-options-container" id="girlist">
+        
+                    <div class="ddlc-option">
+                        <input type="radio" class='radio' id="n" name="girls">
+                        <label for="natsuki">Natsuki</label>
+                    </div>
+            
+                    <div class="ddlc-option">
+                        <input type="radio" class='radio' id="s" name="girls">
+                        <label for="sayori">Sayori</label>
+                    </div>
+            
+                    <div class="ddlc-option">
+                        <input type="radio" class='radio' id="y" name="girls">
+                        <label for="yuri">Yuri</label>
+                    </div>
+        
+                </div>
+        
+            </div>
+
+            <div class="ddlc-selected" id="non">
+                Escolha uma das garotas
+            </div>
+
+        </div>
+    
+        <div class="content">
+
+            <input type="text" id="searcher">
+            <button class="but" onclick='verifique()'>Verifique</button>
+    
+        </div>
+    
+        <div class="return">
+    
+            <p id="answer"></p>
+    
+        </div>
+    
+    </section>
+
+    <div class="girls">
+
+            <div class="s">
+                <img src="imagem/stickers/s_sticker_1.png">
+            </div>
+    
+            <div class="n">
+                <img src="imagem/stickers/n_sticker_1.png">
+            </div>
+    
+            <div class="y">
+                <img src="imagem/stickers/y_sticker_1.png">
+            </div>
+    
+    </div>
+
+    <div class="audio">
+
+        <audio autoplay loop id='song'>
+            <source src="songs/Doki Doki Literature Club OST - Doki Doki Literature Club (Main Theme).mp3" type="audio/mp3">
+        </audio>
+
+        <div id="checkmute"></div>
+
+    </div>
+
+    <script>
+
+        var songVolume = document.getElementById('song')
+        songVolume.volume = 0.10
+
+        var checkmute = document.getElementById('checkmute')
+        checkmute.addEventListener('click', a => {
+            checkmute.classList.toggle('active')
+
+            if(checkmute.classList.contains('active')) {
+                songVolume.volume = 0
+            } else {
+                songVolume.volume = 0.1
+            }
+
+        })
+
+    </script>
+
+    <footer>&copy;zFriez Dev.</footer>
+</body>
+<script src="js/searcherpoem.js"></script>
+<script src="js/ddlcbox.js"></script>
+</html>
