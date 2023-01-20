@@ -31,7 +31,6 @@ function verifique() {
         /* Pega e atualiza o valor da resposta */
         let answer = document.getElementById('answer')
         document.getElementsByClassName('return')[0].style.display = 'block'
-
         /* Lista dos poemas */
         let poemYuriList = ['agonia', 'ambiente', 'análise', 'ansiedade', 'apavorante', 'aura', 'cativo', 'cemitério', 'clímax', 'ambição', 'contaminação', 'decisão', 'desastre', 'desejo', 'transtorno', 'desorientado', 'desprezar', 'destino', 'discreto', 'eletricidade', 'entropia', 'escarlata', 'essência', 'estrelas', 'eternidade', 'enviado dos céus', 'magro', 'existência', 'expiar', 'explorar', 'extremo', 'filosofia', 'gotas', 'huir', 'ilimitado', 'imaginação', 'incapacidade', 'incongruente', 'incontrolável', 'instável', 'infalível', 'inferno', 'infinito', 'sem fim', 'anormal', 'intelectual', 'ira', 'gaiola', 'julgamento', 'luxúria', 'massacre', 'melancolia', 'milagroso', 'paisagem', 'percepção', 'prazer', 'pergunta', 'apodrecer', 'reflexão', 'refulgente', 'remolino', 'negar', 'descanso', 'retrato', 'sentimento', 'sonho', 'suicídio', 'teimoso', 'terror', 'tempo', 'universo', 'corajoso', 'variação', 'vertigem', 'viagem', 'radiante', 'vitalidade', 'vivaz', 'vívido']
 
@@ -41,13 +40,10 @@ function verifique() {
 
         /* Pega a palavra digitada pelo usuário */
         let word = document.getElementById('searcher').value.toLowerCase()
-
         /* Pega a garota selecionada após o processo de verificação (callback) */
         let selGirl = document.querySelector('.ddlc-selected').id
-
         /* Pega a garota correspondente e envia uma mensagem para usuário */
         if (selGirl == "y") {
-
             if (poemYuriList.find(item => word == item)) {
                 answer.innerHTML = 'A palavra ' + word + ' <strong>é</strong> da Yuri.'
                 yuriAn.classList.add('jump')
@@ -56,9 +52,7 @@ function verifique() {
             else {
                 answer.innerHTML = 'A palavra ' + word + ' <strong>não é</strong> da Yuri.'
             }
-
         } else if (selGirl == "s") {
-
             if (poemSayoriList.find(item => word == item)) {
                 answer.innerHTML = 'A palavra ' + word + ' <strong>é</strong> da Sayori.'
                 sayoriAn.classList.add('jump')
@@ -67,9 +61,7 @@ function verifique() {
             else {
                 answer.innerHTML = 'A palavra ' + word + ' <strong>não é</strong> da Sayori.'
             }
-
         } else if (selGirl == "n") {
-
             if (poemNatsukiList.find(item => word == item)) {
                 answer.innerHTML = 'A palavra ' + word + ' <strong>é</strong> da Natsuki.'
                 natsukiAn.classList.add('jump')
@@ -78,15 +70,9 @@ function verifique() {
             else {
                 answer.innerHTML = 'A palavra ' + word + ' <strong>não é</strong> da Natsuki.'
             }
-
         } else {
-
             answer.innerHTML = 'Você não escolheu nenhuma garota!'
-
         }
-
         clearTimeout(timer)
-
     }
-
 }

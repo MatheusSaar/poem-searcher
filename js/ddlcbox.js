@@ -3,7 +3,7 @@ const ddlcOptionsContainer = document.querySelector(".ddlc-options-container");
 
 const ddlcOptionsList = document.querySelectorAll(".ddlc-option")
 
-ddlcSelected.addEventListener("click", () =>  {
+ddlcSelected.addEventListener("click", () => {
     ddlcOptionsContainer.classList.toggle("active");
 });
 
